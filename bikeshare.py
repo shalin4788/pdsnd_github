@@ -48,14 +48,30 @@ def get_filters():
         try:
             if day_of_week.isnumeric():
                 day_of_week = int(day_of_week)
-                day_of_week_dir = {1:"Sunday",2:"Monday",3:"Tuesday",4:"Wednesday",5:"Thursday",6:"Friday",7:"Saturday"}
-                for key, value in day_of_week_dir.items():
-                    if day_of_week != key:
-                        print("Sorry, {} is not a valid day. Please type again by entering either the day of week in integer ex: 1 = Sunday".format(day_of_week))
-                        continue
-                    else:
-                        day = value
-                        break
+                if day_of_week == 1:
+                    day = "Sunday"
+                    break
+                elif day_of_week == 2:
+                    day = "Monday"
+                    break
+                elif day_of_week == 3:
+                    day = "Tuesday"
+                    break
+                elif day_of_week == 4:
+                    day = "Wednesday"
+                    break
+                elif day_of_week == 5:
+                    day = "Thursday"
+                    break
+                elif day_of_week == 6:
+                    day = "Friday"
+                    break
+                elif day_of_week == 7:
+                    day = "Saturday"
+                    break
+                else:
+                    print("Sorry, {} is not a valid day. Please type again by entering either the day of week in integer ex: 1 = Sunday".format(day_of_week))
+                    continue
             else:
                 if day_of_week == "all":
                     day = "all"
